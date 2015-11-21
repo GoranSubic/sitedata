@@ -1,0 +1,12 @@
+select:
+    path: /
+    defaults: { _controller: SiteDataBundle:Select:navigation}
+
+select_read:
+    path: /read
+    defaults: { _controller: SiteDataBundle:Select:read}
+
+select_link:
+    path: /link
+    defaults: { _controller: SiteDataBundle:Select:link}
+

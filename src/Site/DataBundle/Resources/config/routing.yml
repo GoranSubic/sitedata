@@ -1,0 +1,11 @@
+site_data_select:
+    resource: "@SiteDataBundle/Resources/config/routing/select.yml"
+    prefix: /select
+
+site_data_test:
+    resource: "@SiteDataBundle/Resources/config/routing/test.yml"
+    prefix: /test
+
+site_data_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: SiteDataBundle:Default:index }

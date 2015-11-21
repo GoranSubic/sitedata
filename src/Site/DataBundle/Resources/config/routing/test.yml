@@ -1,0 +1,7 @@
+test:
+    path: /test
+    defaults: { _controller: SiteDataBundle:Test:test}
+
+test_succes:
+    path: /test
+    defaults: { _controller: SiteDataBundle:Test:test}

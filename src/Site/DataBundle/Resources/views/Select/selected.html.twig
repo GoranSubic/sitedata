@@ -1,0 +1,21 @@
+<h2>This is example of DOMCrawler from html</h2>
+<br />
+<ul id="showData">
+    {% for array in showData %}
+
+            <div>
+                <h3>Data from html:</h3>
+                {% for item in array %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </div>
+            <br />
+
+    {% endfor %}
+</ul>
+
+<br /><br />
+
+Html iz forme je:
+<br />
+{{ html }}

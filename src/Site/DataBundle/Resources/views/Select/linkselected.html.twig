@@ -1,0 +1,30 @@
+<h2>This is example of DOMCrawler from html page</h2>
+<h4><a href="http://www.olala.co.rs/orders/">http://www.olala.co.rs/orders/</a></h4>
+<br />
+<ul id="showData">
+
+    {% for array in showData %}
+        <div style="float: left; border-color: chocolate; margin-right: 10px;">
+           <h3>Data about article from html page:</h3>
+            <div style="float: left; margin-right: 50px;">
+                <img src={{ array[3] }} style="width:100px;height:100px">
+            </div>
+            <div style="float: left">
+                {% for item in array %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+    <br />
+
+</ul>
+
+<br /><br />
+
+<div style="float: left; margin: 30px">
+    <br />
+    Html iz forme je:
+    <br />
+    {{ html }}
+</div>
