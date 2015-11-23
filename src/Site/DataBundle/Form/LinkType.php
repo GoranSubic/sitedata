@@ -26,7 +26,7 @@ class LinkType extends AbstractType {
                     'style' => 'width:300px; height:30px'),
                     'data' => $url,
                     'read_only' => true,
-                    'label' => 'Link of page',
+                    'label' => 'Link of page ',
                 ))
             //->add('due_date', 'datetime')
             ->add('save', 'submit', array('label' => 'Get data from page'))

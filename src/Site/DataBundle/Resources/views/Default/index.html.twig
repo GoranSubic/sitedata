@@ -1,5 +1,17 @@
-<h1>This is form for enter html data</h1>
+{% extends 'SiteDataBundle:Default:base.html.twig' %}
 
+{% block first %}
+<h1>This is form for enter html data</h1>
+{% endblock %}
+
+{% block form %}
 {# { form(form, {'attr': {'novalidate': 'novalidate'}}) } #}
 
 {{ form(form) }}
+
+    <div>
+
+        <a href="{{ path('select') }}">Go to navigation page</a>
+
+    </div>
+{% endblock %}

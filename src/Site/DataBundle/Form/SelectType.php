@@ -18,7 +18,7 @@ class SelectType extends AbstractType {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $link = $_SERVER['DOCUMENT_ROOT']."\sitedata\src\Site\DataBundle\Utils\urlexample.html";
-        print_r($link);
+        //print_r($link);
         @$url = file_get_contents($link);
 
         $builder

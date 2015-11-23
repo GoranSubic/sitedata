@@ -1,5 +1,10 @@
-<h1>Your choice</h1>
+{% extends 'SiteDataBundle:Default:base.html.twig' %}
 
+{% block first %}
+    <h1>Your choice</h1>
+{% endblock %}
+
+{% block form %}
 <ul>
     <div>
         <li><a href="{{ path('select_link') }}">Read from URL</a></li>
@@ -41,3 +46,5 @@
     </textarea>
 </pre>
 </div>
+
+{% endblock %}

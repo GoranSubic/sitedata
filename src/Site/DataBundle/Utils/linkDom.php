@@ -32,16 +32,18 @@ class linkDom {
         *
         *
         */
-
         $readData = $crawler
             ->filterXpath('//html/body/div/div/form/div/div')
             //->extract(array('_text', 'class'))
         ;
 
+        /*
         $readData0 = $crawler
             ->filterXpath('//html/body/div/div/form/div/div')
             ->extract(array('_text', 'class'))
         ;
+        print_r($readData0);
+        */
 
         $html = '';
         foreach ($readData as $domElement) {
@@ -88,7 +90,7 @@ class linkDom {
             ->extract(array('_text', 'class'))
         ;
 
-        /**** getting Description: to threeth array $showData3 *****/
+        /**** getting Description: to third array $showData3 *****/
         $showData3 = array();
         $j3 = 0;
         foreach($readData33 as $keyrow => $valuerow){
@@ -102,11 +104,12 @@ class linkDom {
             }
         }
 
+        /*
         $html3 = '';
         foreach ($readData3 as $domElement) {
             $html3 .= $domElement->ownerDocument->saveHTML($domElement);
         }
-
+        */
 
         /******** Reading data URL from table - tr-td - $crawler->add($html);********/
         // /html/body/div/table
@@ -192,7 +195,7 @@ class linkDom {
         $showData = array($showData1, $showData2, $showData3, $showData4);
 
         $i = count($showData[0]);
-        print_r($i);
+        //print_r($i);
 
         $showDataD1 = $showData[0];
         $showDataD2 = $showData[1];
