@@ -69,14 +69,14 @@ class SelectController extends Controller {
 
             //$html = $select->getHtml();
             $link = $select->getLink();
-            $html = file_get_contents($link);
+            $url = file_get_contents($link);
 
             $shake = new linkDom();
-            $showData = $shake->extractAction($html);
+            $showData = $shake->extractAction($url);
 
 
             return $this->render('SiteDataBundle:Select:linkselected.html.twig', array(
-                    'html' => $html,
+                    'html' => $url,
                     'showData' => $showData,
                 ));
         }

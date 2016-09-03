@@ -15,13 +15,23 @@
 
         {% for array in showData %}
             <div style="float: left; border-color: chocolate; margin-right: 10px; width: 30%">
-               <h3>Data about article from html page:</h3>
+               <h4>Data {{ loop.index }}. about article from html page:</h4>
                 <div style="float: left; margin-right: 50px;">
-                    <img src={{ array[3] }} style="width:100px;height:100px">
+                    <a href="{{ array[3] }}" target="_blank">
+                        <img src={{ array[3] }} style="width:100px;height:100px">
+                    </a>
                 </div>
                 <div class="form-group" style="float: left">
                     {% for item in array %}
-                        <li>{{ item }}</li>
+                        {% if loop.last %}
+                            <li>
+                                <a href="{{ array[3] }}" target="_blank">
+                                    Show on site
+                                </a>
+                            </li>
+                        {% else %}
+                            <li>{{ item }}</li>
+                        {% endif %}
                     {% endfor %}
                 </div>
             </div>
@@ -32,10 +42,10 @@
 
     <br />
 
-    <div style="float: left; margin: 30px">
+    {#<div style="float: left; margin: 30px">
         <br />
         Html iz forme je:
         <br />
         {{ html }}
-    </div>
+    </div>#}
 {% endblock %}

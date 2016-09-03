@@ -12,13 +12,13 @@ use Symfony\Component\DomCrawler\Crawler;
 
 class linkDom {
 
-    public function extractAction($html)
+    public function extractAction($url)
     {
-        //$html = htmlspecialchars_decode($html);
+        //$html = htmlspecialchars_decode($url);
         //print_r($html);
 
         $crawler = new Crawler();
-        $crawler->add($html);
+        $crawler->add($url);
 
         /*$crawler = $crawler->filter('body')->nextAll();
         foreach ($crawler as $domElement) {
